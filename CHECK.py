@@ -12,6 +12,8 @@ st.write("***成绩查询地址：https://myuni.sydney.edu.au/api/student/degree
 st.write("***查询步骤：复制目标网址的字典数据到此网站即可***")
 
 docs = st.text_area('Input Doc Text 0')
+data = json.loads(docs)
+st.write(pd.DataFrame(data[0]['periods'][1]['unitsOfStudy']))
 '''    
 copy_button = Button(label="粘贴成绩复制结果")
 
