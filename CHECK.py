@@ -12,7 +12,7 @@ st.write("***成绩查询地址：https://myuni.sydney.edu.au/api/student/degree
 st.write("***查询步骤：复制目标网址的字典数据到此网站即可***")
 
 
-docs = st.text_area('**将数据全部复制到此粘贴板后点击确认即可**')
+docs = st.text_area('将数据全部复制到此粘贴板后点击确认即可')
 check = st.button('确认生成表格')
 clear = st.button('清空数据表格')
 
