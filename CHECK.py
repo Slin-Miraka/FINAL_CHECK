@@ -10,7 +10,9 @@ import json
 st.set_page_config(layout="wide")
 st.write("***成绩查询地址：https://myuni.sydney.edu.au/api/student/degrees***")
 st.write("***查询步骤：复制目标网址的字典数据到此网站即可***")
-    
+
+docs = st.text_area('Input Doc Text 0', docs)
+'''    
 copy_button = Button(label="粘贴成绩复制结果")
 
 copy_button.js_on_event("button_click", CustomJS(code="""
@@ -18,7 +20,7 @@ copy_button.js_on_event("button_click", CustomJS(code="""
     """))
 
 
-    
+   
 result = streamlit_bokeh_events(
     copy_button,
     events="GET_TEXT",
@@ -27,7 +29,7 @@ result = streamlit_bokeh_events(
     override_height=75,
     debounce_time=0)    
 #clear = st.button('清空数据表格')
-'''
+
 if result:
     #if clear:
         #st.write("")
@@ -40,14 +42,15 @@ if result:
        #except:
             #st.error("成绩数据没有复制")
         st.write(data)
-'''
+
 
 if result:
     if "GET_TEXT" in result:
         df = pd.read_csv(StringIO(result.get("GET_TEXT")))
         st.table(df)
 
-       
+'''     
+
 
 st.write("***如果成绩是 status = COMPLETED; CreditedPoints = 6, 恭喜该门课已通过***")
 st.write("***注：这个网站只是帮助大家简化成绩查看流程，没有在后台设置爬虫程序，请放心食用！***")
