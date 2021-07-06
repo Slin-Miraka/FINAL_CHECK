@@ -1,0 +1,5 @@
+streamlit
+bokeh
+streamlit_bokeh_events
+pandas
+json
