@@ -32,12 +32,14 @@ if result:
     #if clear:
         #st.write("")
     if "GET_TEXT" in result:
-        list_ = [*StringIO(result.get("GET_TEXT"))][0]
+        data = pd.read_csv(StringIO(result.get("GET_TEXT")))
+        #list_ = [*StringIO(result.get("GET_TEXT"))][0]
         #try:
-        data = json.loads(list_)
-        st.write(pd.DataFrame(data[0]['periods'][1]['unitsOfStudy']))
+        #data = json.loads(list_)
+        #st.write(pd.DataFrame(data[0]['periods'][1]['unitsOfStudy']))
        #except:
             #st.error("成绩数据没有复制")
+        st.write(data)
 
        
 
