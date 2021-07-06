@@ -33,11 +33,11 @@ if result:
         #st.write("")
     if "GET_TEXT" in result:
         list_ = [*StringIO(result.get("GET_TEXT"))][0]
-        try:
-            data = json.loads(list_, encoding='utf-8')
-            st.write(pd.DataFrame(data[0]['periods'][1]['unitsOfStudy']))
-        except:
-            st.error("成绩数据没有复制")
+        #try:
+        data = json.loads(list_)
+        st.write(pd.DataFrame(data[0]['periods'][1]['unitsOfStudy']))
+       #except:
+            #st.error("成绩数据没有复制")
 
        
 
