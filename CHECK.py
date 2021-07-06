@@ -11,14 +11,18 @@ st.set_page_config(layout="wide")
 st.write("***成绩查询地址：https://myuni.sydney.edu.au/api/student/degrees***")
 st.write("***查询步骤：复制目标网址的字典数据到此网站即可***")
 
+clear = st.button('清空数据表格')
 docs = st.text_area('将数据全部复制到此粘贴板后按ctrl + enter组合键确认')
-try:
-    data = json.loads(docs)
-    df = pd.DataFrame(data[0]['periods'][1]['unitsOfStudy'])
-    df = df.set_index(["code"])
-    st.write(df)
-except:
-    st.error("成绩数据没有复制")
+
+if clear:
+    st.write("")
+    try:
+        data = json.loads(docs)
+        df = pd.DataFrame(data[0]['periods'][1]['unitsOfStudy'])
+        df = df.set_index(["code"])
+        st.write(df)
+    except:
+        st.error("成绩数据没有复制")
 '''    
 copy_button = Button(label="粘贴成绩复制结果")
 
