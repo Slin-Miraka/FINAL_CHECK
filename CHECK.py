@@ -27,7 +27,7 @@ result = streamlit_bokeh_events(
     override_height=75,
     debounce_time=0)    
 #clear = st.button('清空数据表格')
-
+'''
 if result:
     #if clear:
         #st.write("")
@@ -40,6 +40,12 @@ if result:
        #except:
             #st.error("成绩数据没有复制")
         st.write(data)
+'''
+
+if result:
+    if "GET_TEXT" in result:
+        df = pd.read_csv(StringIO(result.get("GET_TEXT")))
+        st.table(df)
 
        
 
