@@ -13,11 +13,12 @@ st.write("***查询步骤：复制目标网址的字典数据到此网站即可*
 
 
 docs = st.text_area('将数据全部复制到此粘贴板后按ctrl + enter组合键确认')
+check = st.button('确认生成表格')
 clear = st.button('清空数据表格')
 
 if clear:
     st.write("")
-else:
+elif check:
     try:
         data = json.loads(docs)
         df = pd.DataFrame(data[0]['periods'][1]['unitsOfStudy'])
