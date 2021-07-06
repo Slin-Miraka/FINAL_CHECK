@@ -16,7 +16,7 @@ docs = st.text_area('将数据全部复制到此粘贴板后按ctrl + enter组�
 
 if clear:
     st.write("")
-elif:
+else:
     try:
         data = json.loads(docs)
         df = pd.DataFrame(data[0]['periods'][1]['unitsOfStudy'])
