@@ -26,12 +26,12 @@ result = streamlit_bokeh_events(
     refresh_on_update=False,
     override_height=75,
     debounce_time=0)    
-clear = st.button('清空数据表格')
+#clear = st.button('清空数据表格')
 
 if result:
-    if clear:
-        st.write("")
-    elif "GET_TEXT" in result:
+    #if clear:
+        #st.write("")
+    if "GET_TEXT" in result:
         list_ = [*StringIO(result.get("GET_TEXT"))][0]
         try:
             data = json.loads(list_, encoding='utf-8')
