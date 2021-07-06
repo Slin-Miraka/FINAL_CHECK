@@ -3,4 +3,4 @@ streamlit
 bokeh
 streamlit_bokeh_events
 pandas==0.25.1
-io
+
