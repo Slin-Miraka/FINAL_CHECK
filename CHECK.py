@@ -11,7 +11,7 @@ st.set_page_config(layout="wide")
 st.write("***成绩查询地址：https://myuni.sydney.edu.au/api/student/degrees***")
 st.write("***查询步骤：复制目标网址的字典数据到此网站即可***")
 
-docs = st.text_area('Input Doc Text 0', docs)
+docs = st.text_area('Input Doc Text 0')
 '''    
 copy_button = Button(label="粘贴成绩复制结果")
 
