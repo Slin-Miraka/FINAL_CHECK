@@ -34,4 +34,4 @@ if result:
 
 st.write("***如果成绩是 status = COMPLETED; CreditedPoints = 6, 恭喜该门课已通过***")
 st.write("***注：这个网站只是帮助大家简化成绩查看流程，没有在后台设置爬虫程序，请放心食用！***")
-st.write("***网站代码地址：https://myuni.sydney.edu.au/api/student/degrees***")
+st.write("***网站代码地址：https://github.com/Slin-Miraka/FINAL_CHECK/blob/main/CHECK.py***")
