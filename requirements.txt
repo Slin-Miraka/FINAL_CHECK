@@ -2,5 +2,5 @@ json5==0.8.5
 streamlit
 bokeh
 streamlit_bokeh_events
-pandas
+pandas==0.25.1
 io
