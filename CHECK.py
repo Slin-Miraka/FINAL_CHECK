@@ -16,7 +16,6 @@ docs = st.text_area('将数据全部复制到此粘贴板后按ctrl + enter组�
 clear = st.button('清空数据表格')
 
 if clear:
-    docs = []
     st.write("")
 else:
     try:
